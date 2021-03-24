@@ -1,0 +1,25 @@
+﻿<Window x:Class="GroupProject.wndSearch"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GroupProject"
+        mc:Ignorable="d"
+        Title="SearchWindow" Height="450" Width="800" Closing="Window_Closing" ResizeMode="NoResize">
+    <Grid>
+        <ComboBox x:Name="cboInvoiceNumber" HorizontalAlignment="Left" Margin="23,81,0,0" VerticalAlignment="Top" Width="157" SelectionChanged="cboInvoiceNumber_SelectionChanged"/>
+        <ComboBox x:Name="cboInvoiceDate" HorizontalAlignment="Left" Margin="23,175,0,0" VerticalAlignment="Top" Width="157" SelectionChanged="cboInvoiceDate_SelectionChanged"/>
+        <ComboBox x:Name="cboInvoiceCharge" HorizontalAlignment="Left" Margin="23,267,0,0" VerticalAlignment="Top" Width="157" SelectionChanged="cboInvoiceCharge_SelectionChanged"/>
+        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="258,371,0,0" VerticalAlignment="Top" Width="117" Height="34" Click="btnSubmit_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="469,371,0,0" VerticalAlignment="Top" Width="117" Height="34" Click="btnCancel_Click"/>
+        <DataGrid x:Name="dgResults" HorizontalAlignment="Left" Height="341" Margin="210,10,0,0" VerticalAlignment="Top" Width="572" IsTextSearchEnabled="True" SelectionMode="Single" IsReadOnly="True"/>
+        <Label x:Name="lblNumber" Content="Invoice Number" HorizontalAlignment="Left" Margin="23,50,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblDate" Content="Invoice Date" HorizontalAlignment="Left" Margin="23,144,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.132,0.038"/>
+        <Label x:Name="lblCharge" Content="Total Charge" HorizontalAlignment="Left" Margin="23,236,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnResetNumber" Content="Reset" HorizontalAlignment="Left" Margin="105,108,0,0" VerticalAlignment="Top" Width="75" Click="btnResetNumber_Click"/>
+        <Button x:Name="btnResetDate" Content="Reset" HorizontalAlignment="Left" Margin="105,202,0,0" VerticalAlignment="Top" Width="75" Click="btnResetDate_Click"/>
+        <Button x:Name="btnResetCharge" Content="Reset" HorizontalAlignment="Left" Margin="105,294,0,0" VerticalAlignment="Top" Width="75" Click="btnResetCharge_Click"/>
+
+    </Grid>
+</Window>
+

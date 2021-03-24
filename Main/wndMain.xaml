@@ -1,0 +1,42 @@
+﻿<Window x:Class="GroupProject.wndMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GroupProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="470" Width="800" ResizeMode="NoResize">
+    <Grid Margin="0">
+        <DockPanel Height="26" VerticalAlignment="Top">
+            <Menu DockPanel.Dock="Top" Height="29">
+                <MenuItem Name="menuBtnEditItems" Header="Edit Items" Click="MenuBtnEditItems_Click"/>
+                <MenuItem Name="menuBtnSearchInvoices" Header="Search For Invoice" Click="MenuBtnSearchInvoices_Click"/>
+            </Menu>
+        </DockPanel>
+
+        <Button x:Name="btnAddInvoice" Content="Add New Invoice" HorizontalAlignment="Left" VerticalAlignment="Top" Width="229" Margin="20,32,0,0" Height="29" Click="BtnAddInvoice_Click"/>
+        <Button x:Name="btnEdit" Content="Edit Invoice" HorizontalAlignment="Left" VerticalAlignment="Top" Width="229" Margin="20,66,0,0" Height="29" IsEnabled="False" Click="BtnEdit_Click"/>
+        <Label Name="lblInvoiceNumber" Content="Invoice #: N/A" Margin="24,104,0,-19" FontWeight="Bold"/>
+        <Label Content="Date: " Margin="24,130,0,-19"/>
+        <DatePicker Name="datepInvoiceDate" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="61,127,0,0" IsEnabled="False" SelectedDateChanged="DatepInvoiceDate_SelectedDateChanged"/>
+
+        <Label Content="Invoice Items" Margin="90,160,0,-19" FontWeight="Bold"/>
+        <Label Name="lblItemNumber" Content="Selected Item #: N/A" Margin="24,179,0,-19" FontWeight="Bold"/>
+        <Button x:Name="btnDeleteItem" Content="Delete Selected Item" HorizontalAlignment="Left" VerticalAlignment="Top" Width="229" Margin="20,202,0,0" Height="29" IsEnabled="False" Click="BtnDeleteItem_Click"/>
+
+        <Label Content="Item to add: " Margin="24,250,0,-19"/>
+        <ComboBox x:Name="cboItemChooser" HorizontalAlignment="Left" Margin="93,249,0,0" VerticalAlignment="Top" Width="157" IsEnabled="False" SelectionChanged="CboItemChooser_SelectionChanged"/>
+
+        <Label Content="Item Cost: " Margin="24,275,0,-19"/>
+        <TextBox Name="txtbItemCost" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="93,274,0,0" Width="60" IsReadOnly="True"></TextBox>
+
+        <Button x:Name="btnAddItem" Content="Add New Item" HorizontalAlignment="Left" VerticalAlignment="Top" Width="229" Margin="20,299,0,0" Height="29" IsEnabled="False" Click="BtnAddItem_Click"/>
+
+        <Label Name="lblTotal" Content="Total Cost: " Margin="24,332,0,-19"/>
+
+        <Button x:Name="btnSaveInvoice" Content="Save Invoice" HorizontalAlignment="Left" VerticalAlignment="Top" Width="229" Margin="20,352,0,0" Height="29" IsEnabled="False" Click="BtnSaveInvoice_Click"/>
+        <Button x:Name="btnDeleteInvoice" Content="Delete Invoice" HorizontalAlignment="Left" VerticalAlignment="Top" Width="229" Margin="20,387,0,0" Height="29" IsEnabled="False" Click="BtnDeleteInvoice_Click"/>
+
+        <DataGrid x:Name="dgLineItems" HorizontalAlignment="Left" Height="349" Margin="265,50,0,0" VerticalAlignment="Top" Width="505" IsTextSearchEnabled="True" SelectionMode="Single" IsReadOnly="True" SelectionChanged="DgLineItems_SelectionChanged"/>
+    </Grid>
+</Window>

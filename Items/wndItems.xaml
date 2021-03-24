@@ -1,0 +1,29 @@
+﻿<Window x:Class="GroupProject.wndItems"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GroupProject"
+        mc:Ignorable="d"
+        Title="ItemsWindow" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <DataGrid x:Name="dgItems" HorizontalAlignment="Left" Height="288" Margin="30,50,0,0" VerticalAlignment="Top" Width="495" SelectionChanged="dgItems_SelectionChanged"/>
+        <Label x:Name="lblItems" Content="Items" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="254,21,0,0" FontSize="14" FontWeight="Bold"/>
+        <Label x:Name="lblItemCode" Content="Item Code" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="539,205,0,0"/>
+        <Label x:Name="lblItemDescription" Content="Item Description" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="539,244,0,0"/>
+        <Label x:Name="lblItemCost" Content="Item Cost" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="539,313,0,0"/>
+        <TextBox x:Name="txtbItemCode" HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="27" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" Margin="609,204,0,0" MaxLength="4" PreviewKeyDown="TxtbItemCode_PreviewKeyDown"/>
+        <TextBox x:Name="txtbItemDescription" HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="27" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" Margin="539,270,0,0"  MaxLength="30"/>
+        <TextBox x:Name="txtbItemCost" HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="27" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" Margin="609,312,0,0"  MaxLength="7"/>
+        <Button x:Name="btnAddItem" Content="Add New Item" HorizontalAlignment="Left" VerticalAlignment="Top" Width="229" Margin="539,50,0,0" Height="29" Click="btnAddItem_Click"/>
+        <Button x:Name="btnEditItem" Content="Edit Existing Item" HorizontalAlignment="Left" VerticalAlignment="Top" Width="229" Margin="539,84,0,0" Height="29" Click="btnEditItem_Click" IsEnabled="False"/>
+        <Button x:Name="btnDeleteItem" Content="Delete Existing Item" HorizontalAlignment="Left" VerticalAlignment="Top" Width="229" Margin="539,118,0,0" Height="29" Click="btnDeleteItem_Click" IsEnabled="False"/>
+        <Label x:Name="lblItemCodeError" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="609,173,0,0" Foreground="Red"/>
+        <Label x:Name="lblItemDescriptionError" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="641,239,0,0" Foreground="Red"/>
+        <Label x:Name="lblItemCostError" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="609,344,0,0" Foreground="Red"/>
+        <Label x:Name="lblError" Content="" HorizontalContentAlignment="Center" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,375,27,0" Foreground="Red" Width="737"/>
+        <Label x:Name="lblSuccess" Content="" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="30,357,0,0" Width="495" Background="#00000000" Foreground="Lime"/>
+        <Label x:Name="lblEditHelp" Content="If you would like to Edit a selected item, DO NOT modify the code" HorizontalAlignment="Left" Margin="539,152,0,0" VerticalAlignment="Top" Foreground="#FF02FF02" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
